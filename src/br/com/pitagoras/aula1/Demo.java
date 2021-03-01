@@ -1,5 +1,6 @@
 package br.com.pitagoras.aula1;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Demo {
@@ -16,6 +17,8 @@ public class Demo {
         int idade;
         double peso;
         double altura;
+        int index = 0;
+
         System.out.println();
         System.out.println("Olá, seja bem vindo!");
         System.out.println();
@@ -24,12 +27,18 @@ public class Demo {
         idade = entradaTeclado.nextInt();
         System.out.printf("\nA idade informada foi %d anos", idade);
         System.out.println();
+        System.out.println("Por favor, informe seu nome: ");
+        nome = entradaTeclado.next();
+
 
         // Utilizando If/Else
         if (idade >= 18) {
-            System.out.println("Entrada Liberada, seja bem vindo!!");
+            System.out.printf("Entrada Liberada %s, seja bem vindo!!\n", nome.toUpperCase(Locale.ROOT));
         } else {
-            System.out.println("Entrada bloqueada, você ainda não atingiu a idade mínima");
+            System.out.printf(
+                    "%s, sua entrada foi bloqueada, você ainda não atingiu a idade mínima",
+                    nome.toUpperCase()
+            );
         }
 
         // Utilizando o operador ternário do java :?
@@ -38,5 +47,7 @@ public class Demo {
                         "Entrada Liberada, seja bem vindo!!" :
                         "Entrada bloqueada, você ainda não atingiu a idade mínima"
         );
+
+        // Exemplo while
     }
 }

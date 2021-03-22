@@ -17,6 +17,7 @@ public class Exercicio3 {
         this.numbers = numbers;
     }
 
+
     public void setNumbers(int[] numbers) {
         this.numbers = numbers;
     }

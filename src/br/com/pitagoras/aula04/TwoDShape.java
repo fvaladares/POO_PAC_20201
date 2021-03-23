@@ -2,16 +2,40 @@ package br.com.pitagoras.aula04;
 
 // 15 minutos: 20:27
 public class TwoDShape {
-    public double width;
-    public double height;
+    private double width;
+    private double height;
+
+    public TwoDShape(double width,
+                     double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Accessors methods
+    public double getWidth() {
+        return this.width;
+    }
+
+    /**
+     * @param width - Triangle width
+     */
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
 
     public String showDimen() {
-        return new StringBuilder()
-                .append("Width and height are ")
-                .append(width)
-                .append(" and ")
-                .append(height)
-                .toString();
+        return "Width and height are " +
+                width +
+                " and " +
+                height;
 
         // return "Width and height are " + width + " and " + height;
     }

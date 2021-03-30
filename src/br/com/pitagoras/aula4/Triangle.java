@@ -1,4 +1,4 @@
-package br.com.pitagoras.aula04;
+package br.com.pitagoras.aula4;
 
 public class Triangle extends TwoDShape {
     public String style;
@@ -19,6 +19,7 @@ public class Triangle extends TwoDShape {
     }
 
 
+    @Override
     public double area() {
         return (getWidth() * getHeight()) / 2;
     }

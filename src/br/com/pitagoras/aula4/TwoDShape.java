@@ -1,7 +1,7 @@
-package br.com.pitagoras.aula04;
+package br.com.pitagoras.aula4;
 
 // 15 minutos: 20:27
-public class TwoDShape {
+public abstract class TwoDShape {
     private double width;
     private double height;
 
@@ -39,4 +39,6 @@ public class TwoDShape {
 
         // return "Width and height are " + width + " and " + height;
     }
+
+    public abstract double area();
 }

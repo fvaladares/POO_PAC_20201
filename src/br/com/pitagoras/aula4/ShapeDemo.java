@@ -1,4 +1,4 @@
-package br.com.pitagoras.aula04;
+package br.com.pitagoras.aula4;
 
 
 public class ShapeDemo {

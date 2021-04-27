@@ -9,7 +9,8 @@ public class Funcionario extends Pessoa {
                        String sobrenome,
                        int matricula,
                        double salario) {
-//        this.
+        this.setNome(nome);
+        this.setSobrenome(sobrenome);
         this.matricula = matricula;
         this.salario = salario;
     }
@@ -29,5 +30,8 @@ public class Funcionario extends Pessoa {
         return this.salario * 0.4;
     }
 
-
+    @Override
+    public String returnNomeCompleto(String separador) {
+        return this.getNome() + separador + this.getSobrenome();
+    }
 }

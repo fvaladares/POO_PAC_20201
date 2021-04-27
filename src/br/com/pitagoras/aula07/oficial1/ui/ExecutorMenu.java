@@ -1,9 +1,12 @@
 package br.com.pitagoras.aula07.oficial1.ui;
 
+import br.com.pitagoras.aula07.oficial1.model.Funcionario;
+
 import java.util.Scanner;
 
 public class ExecutorMenu {
     private Scanner entrada;
+    Funcionario f;
 
     public void menu() {
         boolean control = true;
@@ -31,7 +34,15 @@ public class ExecutorMenu {
 
 
     private void consultar() {
-        System.out.println("consultar");
+
+        try {
+            System.out.printf("Funcionario: " + f.returnNomeCompleto("*"));
+            System.out.println("Classe: " + f.getClass());
+        } catch (NullPointerException e) {
+            System.out.println("Ocorreu uma falha no sistema, nenhum funcionário cadastrado.");
+            System.out.println("\nTente novamente mais tarde.\n");
+        }
+        System.out.println("\n");
     }
 
     private void cadastrar() {
@@ -40,7 +51,7 @@ public class ExecutorMenu {
         opt = entrada.nextInt();
 
         if (opt == 1) {
-
+            f = new Funcionario("Fabricio", "Valadares", 1234, 1000.00);
         }
 
     }

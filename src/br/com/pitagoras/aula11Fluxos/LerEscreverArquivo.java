@@ -6,7 +6,7 @@ public class LerEscreverArquivo {
     public static void main(String[] args) {
         String entradaDoUsuario;
         String nomeDoArquivo = "ListaDeNomes.txt";
-        FileWriter fileWriter = null; // Escrever no arquivo
+        FileWriter fileWriter; // Escrever no arquivo
         BufferedReader bufferedReader; // Faz a leitura dos caracteres do terminal
 
         System.out.println("Por favor, informe seu nome completo: ");
@@ -27,7 +27,7 @@ public class LerEscreverArquivo {
             System.err.println(
                     "Falha 200: Não é possível realizar a leitura de dados no momento, " +
                             "tente novamente mais tarde. Se o problema persistir, por favor, " +
-                            "entre em contato com suporte.");
+                            "entre em contato com suporte através do helpdesk.");
 //            e.printStackTrace();
         }
 

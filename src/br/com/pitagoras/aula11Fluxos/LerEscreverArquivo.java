@@ -41,7 +41,7 @@ public class LerEscreverArquivo {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Falha de I/O");
         }
     }
 }

@@ -38,6 +38,7 @@ public class LerEscreverArquivo {
             while ((linha = bufferedReader.readLine()) != null) {
                 System.out.println(linha);
             }
+            bufferedReader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
